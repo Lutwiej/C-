@@ -48,6 +48,11 @@ public class Program
 {
     public static void Main()
     {
+
+        Character Hero = new Character();
+        Enemy badGuy = new Enemy();
+
+
         int redo = 0;
         int width = 20;
         int height = 20;
@@ -86,31 +91,28 @@ public class Program
                     Console.Write("O");
                     break;
             }
-        }
-        while (redo == 0);
+            if (width = 30 && height = 15)
+            {
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine(Hero);
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine(badGuy);
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine("Bach! Ciach!");
 
+                badGuy.attack(Hero);
+                Hero.attack(badGuy);
 
-        Character Hero = new Character();
-        Enemy badGuy = new Enemy();
-
-        Console.WriteLine("----------------------------------");
-        Console.WriteLine(Hero);
-        Console.WriteLine("----------------------------------");
-        Console.WriteLine(badGuy);
-        Console.WriteLine("----------------------------------");
-        Console.WriteLine("Bach! Ciach!");
-
-        badGuy.attack(Hero);
-        Hero.attack(badGuy);
-
-        Console.WriteLine("----------------------------------");
-        Console.WriteLine(Hero);
-        Console.WriteLine("----------------------------------");
-        Console.WriteLine(badGuy);
-        Console.WriteLine("----------------------------------");
-        if (badGuy.enemyHP<=0)
-        {
-            Console.WriteLine("Przeciwnik pokonany! Gratulacje!");
-        }
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine(Hero);
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine(badGuy);
+                Console.WriteLine("----------------------------------");
+                if (badGuy.enemyHP <= 0)
+                {
+                    Console.WriteLine("Przeciwnik pokonany! Gratulacje!");
+                }
+            }
+        }  while (redo == 0);
     }
 }
